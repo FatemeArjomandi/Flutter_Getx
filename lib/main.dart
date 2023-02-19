@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_2/pages/first.viwe.dart';
+import 'package:flutter_application_2/pages/second.viwe.dart';
 import 'package:get/get.dart';
 
 void main() {
@@ -15,9 +17,12 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Flutter GetX State Management Demo',
       theme: ThemeData(
-        primarySwatch: Colors.red,
+        textTheme: const TextTheme(bodyText1: TextStyle(fontSize: 19, color: Colors.blueGrey))
       ),
-      
-      //home: const Splash(),
+      initialRoute: '/first',
+      getPages: [
+        GetPage(name: '/first', page: () => const First()),
+        GetPage(name: '/second', page:() =>  Second())
+      ],
     );
     }}
