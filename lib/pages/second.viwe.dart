@@ -5,7 +5,7 @@ import '../home_page_controller.dart';
 
 class Second extends StatelessWidget {
   Second({super.key});
-  final homePageController = Get.put(HomePageController());
+  final homePageController = Get.put(Controller());
 
   @override
   Widget build(BuildContext context) {
