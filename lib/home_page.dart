@@ -14,6 +14,15 @@ class Home extends StatelessWidget {
       appBar: AppBar(
         title: Obx((() => Text('Clicks: ${c.count}'))),
       ),
+
+      body: Center(
+        child: ElevatedButton(onPressed: () {  },
+        child:const Text('Go to other'),
+        ),
+
+      ),
+      floatingActionButton: FloatingActionButton(onPressed: () {  },
+      child:const Icon(Icons.add),),
     );
   }
 }
