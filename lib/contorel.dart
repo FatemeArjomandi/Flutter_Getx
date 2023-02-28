@@ -33,7 +33,6 @@ class Contoroller extends GetxController {
         barBlur: 20,
         borderColor: Colors.white,
         borderRadius: 20.0,
-        //backgroundColor: Colors.grey,
         overlayBlur: 3.0 ,
         duration:const Duration(seconds: 3),
         
