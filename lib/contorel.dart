@@ -25,9 +25,17 @@ class Contoroller extends GetxController {
     }
     else{
       Get.rawSnackbar(
-        title: 'GetX',
-        message: 'Number to negative!',
-        icon: const Icon(Icons.alarm)
+        title: 'Buying Pens',
+        message: 'Can not be less than zeao',
+        icon: const Icon(Icons.alarm, color: Colors.white,),
+        isDismissible: true,
+        barBlur: 20,
+        borderColor: Colors.white,
+        borderRadius: 20.0,
+        //backgroundColor: Colors.grey,
+        overlayBlur: 3.0 ,
+        duration:const Duration(seconds: 3),
+        
       );
     }
   }
