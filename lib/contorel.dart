@@ -4,6 +4,7 @@ import 'package:get/get.dart';
 class Contoroller extends GetxController {
   var books = 0.obs;
   var pens  = 0.obs;
+  int get sum => books.value + pens.value;
   incrimentBooks() => books.value++;
   decrimentBooks() {
     if (books > 0) {

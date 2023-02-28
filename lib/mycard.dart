@@ -129,7 +129,7 @@ class MyCard extends StatelessWidget {
                   borderRadius: BorderRadius.circular(30),
                   color: Colors.blue.shade800,
                 ),
-                child:TextButton(onPressed: () => Get.to(const TotalPage()),
+                child:TextButton(onPressed: () => Get.to( TotalPage()),
                 child: const Text(
                   'Total',
                   style: TextStyle(fontSize: 30, color: Colors.white)),

@@ -1,10 +1,12 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
-import 'package:flutter_application_2/mycard.dart';
+import 'package:flutter_application_2/contorel.dart';
 import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
 
 class TotalPage extends StatelessWidget {
-  const TotalPage({super.key});
+  TotalPage({super.key});
+  final Contoroller c = Get.put(Contoroller());
 
   @override
   Widget build(BuildContext context) {
@@ -17,6 +19,14 @@ class TotalPage extends StatelessWidget {
               'Total items:',
               style: TextStyle(fontSize: 30, color: Colors.blueAccent),
             ),
+            const SizedBox(
+              height: 10,
+            ),
+            Obx(() => Text(
+                  '${c.sum}',
+                  style:
+                      const TextStyle(fontSize: 40, color: Colors.red),
+                )),
             const SizedBox(
               height: 10,
             ),
