@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_2/contorel.dart';
+import 'package:flutter_application_2/total.page.dart';
 import 'package:get/get.dart';
 
 class MyCard extends StatelessWidget {
@@ -128,7 +129,7 @@ class MyCard extends StatelessWidget {
                   borderRadius: BorderRadius.circular(30),
                   color: Colors.blue.shade800,
                 ),
-                child:TextButton(onPressed: () {},
+                child:TextButton(onPressed: () => Get.to(const TotalPage()),
                 child: const Text(
                   'Total',
                   style: TextStyle(fontSize: 30, color: Colors.white)),
