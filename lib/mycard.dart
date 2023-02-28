@@ -1,5 +1,3 @@
-import 'dart:ui';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_application_2/contorel.dart';
 import 'package:get/get.dart';
@@ -111,6 +109,29 @@ class MyCard extends StatelessWidget {
                     color: Colors.white,
                   ),
                   onPressed: () => c.decrimentPens(),
+                ),
+              )
+            ],
+          ),
+          const SizedBox(
+            height: 10,
+          ),
+          Row(
+            children: [
+              Expanded(
+                child: Container(),
+              ),
+              Container(
+                width: 150,
+                height: 60,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(30),
+                  color: Colors.blue.shade800,
+                ),
+                child:TextButton(onPressed: () {},
+                child: const Text(
+                  'Total',
+                  style: TextStyle(fontSize: 30, color: Colors.white)),
                 ),
               )
             ],
