@@ -17,52 +17,104 @@ class MyCard extends StatelessWidget {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Row(children: [
-            const Text(
-              'Books',
-              style: TextStyle(fontSize: 30, color: Colors.amber),
-            ),
-            Expanded(child: Container()),
-            Container(
-              width: 50,
-              height: 50,
-              decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(25),
-                  color: Colors.redAccent),
-              child: IconButton(
+          Row(
+            children: [
+              const Text(
+                'Books',
+                style: TextStyle(fontSize: 30, color: Colors.black),
+              ),
+              Expanded(child: Container()),
+              Container(
+                width: 50,
+                height: 50,
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(25),
+                    color: Colors.redAccent),
+                child: IconButton(
+                    icon: const Icon(
+                      Icons.add,
+                      color: Colors.white,
+                    ),
+                    onPressed: () => c.incrimentBooks()),
+              ),
+              const SizedBox(
+                width: 20,
+              ),
+              Obx(
+                () => Text(
+                  '${c.books}',
+                  style: const TextStyle(fontSize: 30, color: Colors.green),
+                ),
+              ),
+              const SizedBox(
+                width: 20,
+              ),
+              Container(
+                width: 50,
+                height: 50,
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(25),
+                    color: Colors.redAccent),
+                child: IconButton(
+                  icon: const Icon(
+                    Icons.remove,
+                    color: Colors.white,
+                  ),
+                  onPressed: () => c.decrimentBooks(),
+                ),
+              ),
+            ],
+          ),
+          const SizedBox(
+            height: 20,
+          ),
+          Row(
+            children: [
+              const Text(
+                'Pens',
+                style: TextStyle(fontSize: 30, color: Colors.black),
+              ),
+              Expanded(child: Container()),
+              Container(
+                width: 50,
+                height: 50,
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(25),
+                    color: Colors.redAccent),
+                child: IconButton(
                   icon: const Icon(
                     Icons.add,
                     color: Colors.white,
                   ),
-                  onPressed: () => c.incriment()),
-            ),
-            const SizedBox(
-              width: 10,
-            ),
-            Obx(
-              () => Text(
-                c.books.toString(),
-                style: const TextStyle(fontSize: 20, color: Colors.green),
-              ),
-            ),
-            const SizedBox(
-              width: 10,
-            ),
-            Container(
-              width: 50,
-              height: 50,
-              decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(25),
-                  color: Colors.redAccent),
-              child: IconButton(
-                icon: const Icon(
-                  Icons.remove,
-                  color: Colors.white,
+                  onPressed: () => c.incrimentPens(),
                 ),
-                onPressed: () => c.decriment(),
               ),
-            ),
-          ]),
+              const SizedBox(
+                width: 20,
+              ),
+              Obx(() => Text(
+                    '${c.pens}',
+                    style: const TextStyle(fontSize: 30, color: Colors.green),
+                  )),
+              const SizedBox(
+                width: 20,
+              ),
+              Container(
+                width: 50,
+                height: 50,
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(25),
+                    color: Colors.redAccent),
+                child: IconButton(
+                  icon: const Icon(
+                    Icons.remove,
+                    color: Colors.white,
+                  ),
+                  onPressed: () => c.decrimentPens(),
+                ),
+              )
+            ],
+          )
         ],
       ),
     ));
