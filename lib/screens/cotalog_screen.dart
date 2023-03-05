@@ -16,8 +16,10 @@ class CatalogScreen extends StatelessWidget {
           child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-           const CatalogProducts(),
-          ElevatedButton(onPressed:() => Get.to(() => const CartScreen()), child: const Text('Go to Cart'))
+          const CatalogProducts(),
+          ElevatedButton(
+              onPressed: () => Get.to(() => const CartScreen()),
+              child: const Text('Go to Cart'))
         ],
       )),
     );
