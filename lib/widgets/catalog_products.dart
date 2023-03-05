@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_2/models/product_models.dart';
 import 'package:get/get.dart';
 
 class CatalogProducts extends StatelessWidget {
@@ -6,15 +7,46 @@ class CatalogProducts extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Flexible(
+      child: ListView.builder(
+        itemCount: Product.products.length,
+        itemBuilder: (BuildContext context, int index) {
+          return CatalogProductCard(
+            index: index,
+          );
+        },
+      ),
+    );
   }
 }
 
 class CatalogProductCard extends StatelessWidget {
-  const CatalogProductCard({super.key});
+  final int index;
+  const CatalogProductCard({super.key, required this.index});
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 20),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          CircleAvatar(
+            radius: 35,
+            backgroundImage: NetworkImage(Product.products[index].imageUrl),
+          ),
+          const SizedBox(
+            width: 20,
+          ),
+          Expanded(
+              child: Text(
+            Product.products[index].name,
+            style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+          )),
+          Expanded(child: Text('${Product.products[index].price}')),
+          IconButton(onPressed: () {}, icon: const Icon(Icons.add_circle)),
+        ],
+      ),
+    );
   }
 }
