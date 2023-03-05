@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_application_2/models/product_models.dart';
 import 'package:get/get.dart';
 
+import '../contolers/cart_contproler.dart';
+
 class CatalogProducts extends StatelessWidget {
   const CatalogProducts({super.key});
 
@@ -21,8 +23,9 @@ class CatalogProducts extends StatelessWidget {
 }
 
 class CatalogProductCard extends StatelessWidget {
+  final cartContorller = Get.put(CartContorller());
   final int index;
-  const CatalogProductCard({super.key, required this.index});
+  CatalogProductCard({super.key, required this.index});
 
   @override
   Widget build(BuildContext context) {
@@ -44,7 +47,9 @@ class CatalogProductCard extends StatelessWidget {
             style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
           )),
           Expanded(child: Text('${Product.products[index].price}')),
-          IconButton(onPressed: () {}, icon: const Icon(Icons.add_circle)),
+          IconButton(onPressed: () {
+            cartContorller.addProduct(Product.products[index]);
+          }, icon: const Icon(Icons.add_circle)),
         ],
       ),
     );
