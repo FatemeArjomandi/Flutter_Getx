@@ -15,4 +15,7 @@ class CartContorller extends GetxController {
         snackPosition: SnackPosition.BOTTOM,
         duration: const Duration(seconds: 2));
   }
+
+
+  get products => _products; 
 }
