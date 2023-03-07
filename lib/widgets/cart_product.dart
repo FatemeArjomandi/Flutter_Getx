@@ -9,18 +9,20 @@ class CartProducts extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      height: 600,
-      child: ListView.builder(
-        itemCount:contoller.products.length,
-        itemBuilder: (BuildContext context, int index) {
-          return CartProductCard(
-            contoller: contoller,
-            product: contoller.products.keys.toList()[index],
-            quntity:contoller.products.values.toList()[index],
-            index: index,
-          );
-        },
+    return Obx(
+      () => SizedBox(
+        height: 600,
+        child: ListView.builder(
+          itemCount: contoller.products.length,
+          itemBuilder: (BuildContext context, int index) {
+            return CartProductCard(
+              contoller: contoller,
+              product: contoller.products.keys.toList()[index],
+              quntity: contoller.products.values.toList()[index],
+              index: index,
+            );
+          },
+        ),
       ),
     );
   }
@@ -43,7 +45,7 @@ class CartProductCard extends StatelessWidget {
     return Padding(
         padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 10),
         child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween ,
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             CircleAvatar(
               radius: 40.0,
@@ -51,8 +53,21 @@ class CartProductCard extends StatelessWidget {
                 product.imageUrl,
               ),
             ),
-            const SizedBox(width: 20,),
-            Text('fhgfgj')
+            const SizedBox(
+              width: 20,
+            ),
+            Expanded(child: Text(product.name)),
+            IconButton(
+                onPressed: () {
+                  contoller.removeProduct(product);
+                },
+                icon: const Icon(Icons.remove_circle)),
+            Text('$quntity'),
+            IconButton(
+                onPressed: () {
+                  contoller.addProduct(product);
+                },
+                icon: const Icon(Icons.add_circle)),
           ],
         ));
   }
