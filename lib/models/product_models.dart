@@ -10,7 +10,7 @@ class Product {
         name: "Apple",
         price: 2.99,
         imageUrl:
-            'https://www.shutterstock.com/image-photo/red-apple-isolated-on-white-260nw-1727544364.jpg'),
+            'https://st.depositphotos.com/1000141/3428/i/600/depositphotos_34288697-stock-photo-ripe-apple-with-leaf.jpg'),
     Product(
         name: "Orange",
         price: 3.66,

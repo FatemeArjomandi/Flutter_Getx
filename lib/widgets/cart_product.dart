@@ -12,12 +12,12 @@ class CartProducts extends StatelessWidget {
     return SizedBox(
       height: 600,
       child: ListView.builder(
-        itemCount: contoller.products.length,
+        itemCount:contoller.products.length,
         itemBuilder: (BuildContext context, int index) {
           return CartProductCard(
             contoller: contoller,
             product: contoller.products.keys.toList()[index],
-            quntity: contoller.products.keys.values,
+            quntity:contoller.products.values.toList()[index],
             index: index,
           );
         },
@@ -41,17 +41,19 @@ class CartProductCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 20),
-      child: Row(
-        children: [
-          CircleAvatar(
-            radius: 40.0,
-            backgroundImage: NetworkImage(
-              product.imageUrl,
+        padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 10),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween ,
+          children: [
+            CircleAvatar(
+              radius: 40.0,
+              backgroundImage: NetworkImage(
+                product.imageUrl,
+              ),
             ),
-          )
-        ],
-      )
-    );
+            const SizedBox(width: 20,),
+            Text('fhgfgj')
+          ],
+        ));
   }
 }

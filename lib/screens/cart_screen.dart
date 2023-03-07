@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_2/widgets/cart_product.dart';
-import 'package:get/get.dart';
-
+import '../widgets/cart_product.dart';
+import '../widgets/car_total.dart';
 class CartScreen extends StatelessWidget {
   const CartScreen({super.key});
 
@@ -14,6 +13,7 @@ class CartScreen extends StatelessWidget {
       body: Column(
         children: [
           CartProducts(),
+          const CartTotal(),
           
         ],
       ),
