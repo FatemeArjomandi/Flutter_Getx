@@ -26,12 +26,12 @@ class HomePage1 extends StatelessWidget {
           const SizedBox(
             height: 20,
           ),
-          TextButton(
+          ElevatedButton(
             onPressed: () => counter.incriment(),
             child: const Text('incriment',
                 style: TextStyle(
-                    fontSize: 20,
-                    color: Colors.blueAccent,
+                    fontSize: 15,
+                    color: Colors.white,
                     fontWeight: FontWeight.bold)),
           ),
         ]),
