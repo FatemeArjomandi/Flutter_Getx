@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_2/homepage1.dart';
+import 'package:flutter_application_2/homepage2.dart';
 import 'package:get/get.dart';
 
 void main() {
@@ -15,7 +16,13 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: HomePage1(),
+      initialRoute: '/',
+      getPages: [
+        GetPage(name: '/', page:() =>  HomePage1()),
+        GetPage(name: '/HomePage2', page:() => const HomePage2())
+
+      ],
+      
     );
   }
 }
