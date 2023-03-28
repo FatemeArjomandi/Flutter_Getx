@@ -19,7 +19,7 @@ class HomePage1 extends StatelessWidget {
               '${counter.value}',
               style: const TextStyle(
                   fontSize: 30,
-                  color: Colors.lime,
+                  color: Colors.blueAccent,
                   fontWeight: FontWeight.bold),
             ),
           ),
@@ -31,7 +31,7 @@ class HomePage1 extends StatelessWidget {
             child: const Text('incriment',
                 style: TextStyle(
                     fontSize: 20,
-                    color: Colors.purpleAccent,
+                    color: Colors.blueAccent,
                     fontWeight: FontWeight.bold)),
           ),
         ]),
