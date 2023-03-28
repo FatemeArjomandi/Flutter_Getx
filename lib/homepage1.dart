@@ -27,14 +27,18 @@ class HomePage1 extends StatelessWidget {
             height: 20,
           ),
           TextButton(
-              onPressed: () => counter.incriment(),
-              child: const Text('incriment',
-                  style: TextStyle(
-                      fontSize: 20,
-                      color: Colors.purpleAccent,
-                      fontWeight: FontWeight.bold)),
-                      )
+            onPressed: () => counter.incriment(),
+            child: const Text('incriment',
+                style: TextStyle(
+                    fontSize: 20,
+                    color: Colors.purpleAccent,
+                    fontWeight: FontWeight.bold)),
+          ),
         ]),
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: ()=> Get.toNamed('/HomePage2'),
+        child: const Icon(Icons.arrow_forward_ios),
       ),
     );
   }
