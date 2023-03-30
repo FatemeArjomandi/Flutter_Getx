@@ -15,7 +15,7 @@ class Scrin1 extends StatelessWidget {
         child:const  Center(
           child: Text(
             'Scrin1',
-            style: TextStyle(fontSize: 30, color: Colors.green),
+            style: TextStyle(fontSize: 40, color: Colors.black),
           ),
         ),
       ),
