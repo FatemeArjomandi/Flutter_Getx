@@ -8,14 +8,17 @@ class Scrin1 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: GestureDetector(
-        onTap: () {
-          Get.to(()=>const Scrin2());
-        },
-        child:const  Center(
-          child: Text(
-            'Scrin1',
-            style: TextStyle(fontSize: 40, color: Colors.black),
+      body: Container(
+        color: Colors.cyan,
+        child: GestureDetector(
+          onTap: () {
+            Get.to(()=>const Scrin2());
+          },
+          child:const  Center(
+            child: Text(
+              'Scrin1',
+              style: TextStyle(fontSize: 40, color: Colors.black),
+            ),
           ),
         ),
       ),
