@@ -12,9 +12,11 @@ class Scrin1 extends StatelessWidget {
         onTap: () {
           Get.to(()=>const Scrin2());
         },
-        child: const Text(
-          'Scrin1',
-          style: TextStyle(fontSize: 30, color: Colors.green),
+        child:const  Center(
+          child: Text(
+            'Scrin1',
+            style: TextStyle(fontSize: 30, color: Colors.green),
+          ),
         ),
       ),
     );
