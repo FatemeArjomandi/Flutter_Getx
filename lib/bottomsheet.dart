@@ -7,7 +7,6 @@ class Scrin3 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      //floatingActionButtonAnimator: ,
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           Get.bottomSheet(Container(
@@ -38,14 +37,14 @@ class Scrin3 extends StatelessWidget {
                   'gfvyagygyglYGY',
                   style: TextStyle(fontSize: 18),
                 ),
-
                 const SizedBox(
                   height: 20,
                 ),
                 Row(
                   children: [
-                    ElevatedButton(onPressed: (){}, child:Icon(Icons.no_accounts)),
-                    //FloatingActionButton.extended(onPressed: onPressed, label: label)
+                    ElevatedButton.icon(style:ElevatedButton.styleFrom(primary:Colors.red),onPressed: (){Get.back();}, icon:const Icon(Icons.thumb_down,), label:const Text('No')),
+                    const SizedBox(width: 30,),
+                    ElevatedButton.icon(onPressed: (){Get.back();}, icon:const Icon(Icons.thumb_up, color: Colors.blue,), label:const Text('yes'))
                   ],
                 )
               ],
