@@ -10,12 +10,12 @@ class Scrin3 extends StatelessWidget {
       //floatingActionButtonAnimator: ,
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          Get.bottomSheet(
-           Container(
-            color: Colors.blue,
+          Get.bottomSheet(Container(
             padding: const EdgeInsets.symmetric(horizontal: 30.0),
-           )
-          );
+            height: 300,
+            decoration: BoxDecoration(
+                color: Colors.white70, borderRadius: BorderRadius.circular(20)),
+          ));
         },
         child: const Icon(Icons.double_arrow),
       ),
