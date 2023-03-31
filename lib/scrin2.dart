@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_2/bottomsheet.dart';
 import 'package:get/get.dart';
 
 class Scrin2 extends StatelessWidget {
@@ -9,7 +10,7 @@ class Scrin2 extends StatelessWidget {
     return Scaffold(
       body: GestureDetector(
         onTap: () {
-          Get.back();
+          Get.to(()=>const Scrin3());
         },
         child:const Center(
           child:  Text(
