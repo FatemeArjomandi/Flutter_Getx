@@ -18,6 +18,38 @@ class Scrin3 extends StatelessWidget {
                 borderRadius: BorderRadius.only(
                     topRight: Radius.circular(18),
                     topLeft: Radius.circular(18))),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              children:  [
+                const SizedBox(
+                  height: 30,
+                ),
+                const Text(
+                  'Bottom sheet',
+                  style: TextStyle(
+                    fontSize: 25,
+                    fontWeight: FontWeight.bold
+                  ),
+                ),
+                const SizedBox(
+                  height: 20,
+                ),
+                const Text(
+                  'gfvyagygyglYGY',
+                  style: TextStyle(fontSize: 18),
+                ),
+
+                const SizedBox(
+                  height: 20,
+                ),
+                Row(
+                  children: [
+                    ElevatedButton(onPressed: (){}, child:Icon(Icons.no_accounts)),
+                    //FloatingActionButton.extended(onPressed: onPressed, label: label)
+                  ],
+                )
+              ],
+            ),
           ));
         },
         child: const Icon(Icons.double_arrow),
