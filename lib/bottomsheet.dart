@@ -13,8 +13,11 @@ class Scrin3 extends StatelessWidget {
           Get.bottomSheet(Container(
             padding: const EdgeInsets.symmetric(horizontal: 30.0),
             height: 300,
-            decoration: BoxDecoration(
-                color: Colors.white70, borderRadius: BorderRadius.circular(20)),
+            decoration: const BoxDecoration(
+                color: Colors.white70,
+                borderRadius: BorderRadius.only(
+                    topRight: Radius.circular(18),
+                    topLeft: Radius.circular(18))),
           ));
         },
         child: const Icon(Icons.double_arrow),
