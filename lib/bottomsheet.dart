@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_2/scrin1.dart';
 import 'package:get/get.dart';
 
 class Scrin3 extends StatelessWidget {
@@ -61,7 +62,7 @@ class Scrin3 extends StatelessWidget {
                             style: ElevatedButton.styleFrom(
                                 backgroundColor: Colors.green),
                             onPressed: () {
-                              Get.back();
+                              Get.to(() => const Scrin1());
                             },
                             icon: const Icon(
                               Icons.thumb_up,
@@ -81,9 +82,7 @@ class Scrin3 extends StatelessWidget {
                 seconds: 3,
                 //milliseconds: 1000
               ),
-              exitBottomSheetDuration:const Duration(
-                seconds: 3
-              ));
+              exitBottomSheetDuration: const Duration(seconds: 3));
         },
         child: const Icon(Icons.double_arrow),
       ),
