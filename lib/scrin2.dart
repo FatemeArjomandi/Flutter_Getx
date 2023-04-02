@@ -10,7 +10,7 @@ class Scrin2 extends StatelessWidget {
     return Scaffold(
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          
+          Get.defaultDialog();
         },
         child: const Icon(
           Icons.camera,
