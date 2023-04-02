@@ -8,14 +8,24 @@ class Scrin2 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          
+        },
+        child: const Icon(
+          Icons.camera,
+          color: Colors.white,
+        ),
+      ),
       body: GestureDetector(
         onTap: () {
-          Get.to(()=>const Scrin3());
+          Get.to(() => const Scrin3());
         },
-        child:const Center(
-          child:  Text(
-            'Scrin2',
-            style: TextStyle(fontSize: 40, color: Colors.red),
+        child: const Center(
+          child: Text(
+            'Dialog Box ?',
+            style: TextStyle(
+                fontSize: 30, color: Colors.black, fontWeight: FontWeight.w600),
           ),
         ),
       ),
