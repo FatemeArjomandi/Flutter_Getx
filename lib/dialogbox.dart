@@ -17,7 +17,9 @@ class DialogBox extends StatelessWidget {
                 ElevatedButton.icon(
                   style: ElevatedButton.styleFrom(
                       backgroundColor: Colors.redAccent),
-                  onPressed: () {},
+                  onPressed: () {
+                    Get.back();
+                  },
                   icon: const Icon(
                     Icons.thumb_down,
                     color: Colors.white,
@@ -27,7 +29,9 @@ class DialogBox extends StatelessWidget {
                 ElevatedButton.icon(
                   style: ElevatedButton.styleFrom(
                       backgroundColor: Colors.greenAccent),
-                  onPressed: () {},
+                  onPressed: () {
+                    Get.back();
+                  },
                   icon: const Icon(
                     Icons.thumb_up,
                     color: Colors.white,
