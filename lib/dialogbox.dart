@@ -10,7 +10,31 @@ class DialogBox extends StatelessWidget {
     return Scaffold(
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          Get.defaultDialog();
+          Get.defaultDialog(
+              title: 'Dialog Box',
+              middleText: 'Do you want to continue',
+              actions: [
+                ElevatedButton.icon(
+                  style: ElevatedButton.styleFrom(
+                      backgroundColor: Colors.redAccent),
+                  onPressed: () {},
+                  icon: const Icon(
+                    Icons.thumb_down,
+                    color: Colors.white,
+                  ),
+                  label: const Text('No'),
+                ),
+                ElevatedButton.icon(
+                  style: ElevatedButton.styleFrom(
+                      backgroundColor: Colors.greenAccent),
+                  onPressed: () {},
+                  icon: const Icon(
+                    Icons.thumb_up,
+                    color: Colors.white,
+                  ),
+                  label: const Text('Yes'),
+                ),
+              ]);
         },
         child: const Icon(
           Icons.camera,
