@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_application_2/bottomsheet.dart';
 import 'package:get/get.dart';
 
-class Scrin2 extends StatelessWidget {
-  const Scrin2({super.key});
+class DialogBox extends StatelessWidget {
+  const DialogBox({super.key});
 
   @override
   Widget build(BuildContext context) {
