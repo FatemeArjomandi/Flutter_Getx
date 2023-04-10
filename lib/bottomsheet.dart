@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_2/scrin1.dart';
+import 'package:flutter_application_2/snackbr.dart';
 import 'package:get/get.dart';
 
 class Scrin3 extends StatelessWidget {
@@ -49,7 +50,7 @@ class Scrin3 extends StatelessWidget {
                             style: ElevatedButton.styleFrom(
                                 backgroundColor: Colors.red),
                             onPressed: () {
-                              Get.back();
+                              Get.to(() => const Snackbar());
                             },
                             icon: const Icon(
                               Icons.thumb_down,
