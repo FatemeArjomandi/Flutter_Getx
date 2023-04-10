@@ -9,7 +9,17 @@ class Snackbar extends StatelessWidget {
     return Scaffold(
       floatingActionButton: FloatingActionButton(
         backgroundColor: Colors.amber,
-        onPressed: () {},
+        onPressed: () {
+          Get.snackbar('snackbar', 'getx helpful',
+              snackPosition: SnackPosition.BOTTOM,
+              //padding: const EdgeInsets.all(30),
+              margin: const EdgeInsets.all(30),
+              backgroundColor: Colors.amber,
+              icon: const Icon(
+                Icons.thumb_up,
+                color: Colors.white,
+              ));
+        },
         child: const Icon(
           Icons.camera,
           color: Colors.white,
