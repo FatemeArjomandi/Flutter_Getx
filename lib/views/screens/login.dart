@@ -11,6 +11,7 @@ class LoginScreen extends StatelessWidget {
         child: Padding(
           padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 20),
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               const SizedBox(
                 height: 30,
@@ -23,6 +24,22 @@ class LoginScreen extends StatelessWidget {
                   width: 180,
                   height: 190,
                   color: Colors.white70,
+                ),
+              ),
+              const SizedBox(
+                height: 40,
+              ),
+              const Text(
+                'Username',
+                style: TextStyle(fontSize: 20, color: Colors.white) 
+              ),
+              const SizedBox(height: 30,),
+              const TextField( 
+                decoration: InputDecoration(
+                  filled: true,
+                  fillColor: Colors.white,
+                  border: OutlineInputBorder(),
+                  hintText: 'Enter a username'
                 ),
               )
             ],
