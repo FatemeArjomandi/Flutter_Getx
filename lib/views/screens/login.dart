@@ -29,6 +29,21 @@ class LoginScreen extends StatelessWidget {
               const SizedBox(
                 height: 40,
               ),
+              const Text('Username',
+                  style: TextStyle(fontSize: 20, color: Colors.white)),
+              const SizedBox(
+                height: 25,
+              ),
+              const TextField(
+                decoration: InputDecoration(
+                    filled: true,
+                    fillColor: Colors.white,
+                    border: OutlineInputBorder(),
+                    hintText: 'Enter a username'),
+              ),
+              const SizedBox(
+                height: 25,
+              ),
               const Text(
                 'Username',
                 style: TextStyle(fontSize: 20, color: Colors.white) 
