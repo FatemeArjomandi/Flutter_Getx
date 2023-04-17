@@ -103,7 +103,7 @@ class RegisterScreen extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   const Text(
-                    'Dont have an accont?',
+                    'Already have an accont?',
                     style: TextStyle(fontSize: 15, color: Colors.white),
                   ),
                   InkWell(
