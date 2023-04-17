@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_2/views/screens/login.dart';
+import 'package:get/get.dart';
 
 class RegisterScreen extends StatelessWidget {
   const RegisterScreen({super.key});
@@ -76,6 +78,43 @@ class RegisterScreen extends StatelessWidget {
                     fillColor: Colors.white,
                     hintText: 'Confirm password'),
               ),
+              const SizedBox(
+                height: 55,
+              ),
+              Center(
+                child: Container(
+                  alignment: Alignment.center,
+                  height: 45,
+                  width: 90,
+                  decoration: const BoxDecoration(
+                    borderRadius: BorderRadius.all(Radius.circular(10)),
+                    color: Colors.white,
+                  ),
+                  child: const Text(
+                    'Register',
+                    style: TextStyle(fontSize: 15, color: Color(0xff154c79)),
+                  ),
+                ),
+              ),
+              const SizedBox(
+                height: 10,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  const Text(
+                    'Dont have an accont?',
+                    style: TextStyle(fontSize: 15, color: Colors.white),
+                  ),
+                  InkWell(
+                    onTap: () => Get.to(const LoginScreen()),
+                    child: const Text(
+                      'Login',
+                      style: TextStyle(fontSize: 15, color: Colors.blue),
+                    ),
+                  )
+                ],
+              )
             ],
           ),
         ),
