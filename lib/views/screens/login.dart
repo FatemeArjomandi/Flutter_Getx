@@ -45,17 +45,52 @@ class LoginScreen extends StatelessWidget {
                 height: 25,
               ),
               const Text(
-                'Username',
-                style: TextStyle(fontSize: 20, color: Colors.white) 
+                'Password',
+                style: TextStyle(fontSize: 20, color: Colors.white),
               ),
-              const SizedBox(height: 30,),
-              const TextField( 
+              const SizedBox(
+                height: 25,
+              ),
+              const TextField(
                 decoration: InputDecoration(
-                  filled: true,
-                  fillColor: Colors.white,
-                  border: OutlineInputBorder(),
-                  hintText: 'Enter a username'
+                    filled: true,
+                    fillColor: Colors.white,
+                    border: OutlineInputBorder(),
+                    hintText: 'Enter a password'),
+              ),
+              const SizedBox(
+                height: 55,
+              ),
+              Center(
+                child: Container(
+                  alignment: Alignment.center,
+                  decoration: const BoxDecoration(
+                    borderRadius: BorderRadius.all(Radius.circular(10)),
+                    color: Colors.white,
+                  ),
+                  height: 45,
+                  width: 90,
+                  child: const Text(
+                    'Login',
+                    style: TextStyle(fontSize: 15, color: Color(0xff154c79)),
+                  ),
                 ),
+              ),
+              const SizedBox(
+                height: 15,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: const [
+                  Text(
+                    'Dont have an accont?',
+                    style: TextStyle(fontSize: 15, color: Colors.white),
+                  ),
+                  Text(
+                    ' Regester',
+                    style: TextStyle(fontSize: 15, color: Colors.blue),
+                  )
+                ],
               )
             ],
           ),
