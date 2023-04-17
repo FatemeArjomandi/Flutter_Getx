@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_2/views/screens/register.dart';
+import 'package:get/get.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
@@ -81,14 +83,19 @@ class LoginScreen extends StatelessWidget {
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
-                children: const [
-                  Text(
+                children: [
+                  const Text(
                     'Dont have an accont?',
                     style: TextStyle(fontSize: 15, color: Colors.white),
                   ),
-                  Text(
-                    ' Regester',
-                    style: TextStyle(fontSize: 15, color: Colors.blue),
+                  InkWell(
+                    onTap: () {
+                      Get.to(const RegisterScreen());
+                    },
+                    child: const Text(
+                      ' Register',
+                      style: TextStyle(fontSize: 15, color: Colors.blue),
+                    ),
                   )
                 ],
               )
